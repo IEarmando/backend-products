@@ -1,0 +1,88 @@
+node -v: checar version del node
+
+npm init -y: crea un proyecto con la configuracion de node.js por defecto
+
+npm install cors:
+
+npm install express:
+
+npm install mysql2:
+
+npm install promise-mysql:
+
+npm install nodemon(para correrlo en live) morgan -- save-dev :dev-dependencias para el desarrollador
+
+npm run dev: corre en la terminal como si fuera en live
+
+.env: sirve para asegurar datos, no mostrar y ocultar los elementos para
+conectar la base de datos y no se muestre en el archivo principal eso con la dependencia "dotenv"
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+const bicicletas = [
+  {
+    id:1,
+    nombre: "Veloziraptor",
+    precio: 111111,[]
+  },
+  {
+    id:2,
+    nombre: "Biciclón",
+    precio: 222222,
+  },
+  {
+    id:3,
+    nombre: "CicloTravesura",
+    precio: 333333,
+  },
+  {
+    id:4,
+    nombre: "Pedalástica",
+    precio: 444444,
+  },
+  {
+    id:5,
+    nombre: "RuedaFrenesí",
+    precio: 555555,
+  },
+  {
+    id:6,
+    nombre: "CicloLoco",
+    precio: 666666,
+  }
+]
+----------------------------------------------------------------------------------------
+create database productos_en_vivo;
+use productos_en_vivo;
+
+drop table productos;
+
+create table productos (
+id int not null auto_increment primary key,
+nombre varchar(50) not null,
+precio decimal not null,
+urlimagen varchar(250) not null,
+deleted boolean not null
+);
+
+insert into productos (nombre, precio, urlimagen, deleted)
+values ('velocirraptor', 210025, '', 0),
+	('ciclotravesura', 210025, '', 0),
+	('pedalistica', 210025, '', 0),
+	('ruedafrenessi', 210025, '', 0),
+	('cicloloco', 210025, '', 0),
+    ('chichoman10', 210025, '', 0);
+    
+    select * from productos;
+    ----------------------------------------------------------------
+
+    header nav{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 60px;
+}
+
+footer{
+  margin-top: auto;
+  box-shadow: 0 -3px 5px #0004fc1b;
+  text-align: center;
+}
